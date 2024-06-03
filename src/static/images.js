@@ -14,5 +14,6 @@ import linkedin from '../asset/linkedin.svg';
 import facebook from '../asset/facebook.svg';
 import youtube from '../asset/youtube.svg';
 import twitter from '../asset/twitter.svg';
+import listStar from '../asset/twitter.svg';
 
-export { headerLogo, footerLogo, arrowRight, project1, project2, project3, project4, securityBg, lapm, profi, solutions, chevron, linkedin, youtube, twitter, facebook };
+export { headerLogo, footerLogo, arrowRight, project1, project2, project3, project4, securityBg, lapm, profi, solutions, chevron, linkedin, youtube, twitter, facebook, listStar };
