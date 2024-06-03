@@ -1,6 +1,7 @@
 import {Tag} from "../basic/Tag";
 import {FaqItem} from "./FaqItem";
 import {useState} from "react";
+import './FAQ.css'
 
 const faqItems = [
     {

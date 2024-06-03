@@ -1,0 +1,104 @@
+.faq {
+    padding: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 64px;
+}
+.faq-inner {
+    max-width: 382px;
+}
+.faq-items-wrapper {
+    width: 100%;
+}
+.faq-answer-item {
+    overflow: hidden;
+    transition: 0.3s all;
+}
+.faq-answer-item.open {
+    background-color: #8F00FF08;
+    border-radius: 27px;
+}
+.faq-answer-header {
+    padding: 24px;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    border-radius: 24px;
+    gap: 12px;
+}
+.faq-question {
+    transition: 0.3s all ease;
+}
+.open .faq-question {
+    color: #ffffff;
+    background-image: none;
+    -webkit-text-fill-color: #ffffff;
+}
+.open .faq-answer-header {
+    background-color: #8F00FF;
+}
+.faq-answer-content p {
+    line-height: 24px;
+    font-size: 16px;
+    padding: 16px 24px;
+}
+.faq-answer-content a {
+    line-height: 24px;
+    color: #AD45FF;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.faq-icon {
+    transition: transform 0.3s ease;
+    width: 22px;
+    min-width: 22px;
+    background-color: #8224B80F;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+}
+.open .faq-icon {
+    background-color: #ffffff;
+}
+.faq-icon img {
+    transition: 0.3s all ease;
+    width: 10px;
+}
+.open .faq-icon img {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 992px) {
+    .faq {
+        padding: 72px 16px 64px;
+        flex-direction: column;
+        gap: 56px;
+        align-items: center;
+    }
+    .faq-inner {
+        max-width: 100%;
+    }
+    .faq-inner .tag {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+    .faq-answer-header {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .faq-title {
+        text-align: center;
+    }
+}

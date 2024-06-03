@@ -1,4 +1,5 @@
 import {lapm, profi, securityBg, solutions} from "../../static/images";
+import './Security.css'
 
 const securityList = [
     {

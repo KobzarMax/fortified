@@ -1,3 +1,5 @@
+import './FormInput.css'
+
 export const FormInput = ({ required, disabled, name, type, label, placeholder, inputValue, onChange, error, isValid, isError }) => {
     return (
         <div className={`form-field`}>

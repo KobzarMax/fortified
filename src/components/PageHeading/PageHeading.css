@@ -1,0 +1,21 @@
+.page-heading {
+    padding: 88px 223px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+.page-heading-title {
+    color: #ffffff;
+    text-align: center;
+}
+.page-heading-subtitle {
+    color: #E6E6E6;
+    text-align: center;
+}
+@media (max-width: 992px) {
+    .page-heading {
+        padding: 43px 49.5px;
+    }
+}

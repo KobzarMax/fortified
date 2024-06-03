@@ -1,6 +1,7 @@
 import {project1, project2, project3, project4} from "../../static/images";
 import {Tag} from "../basic/Tag";
 import {ProjectItem} from "./ProjectItem";
+import './Projects.css'
 
 const projectsList = [
     {

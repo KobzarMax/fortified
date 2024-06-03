@@ -2,7 +2,7 @@ import {
   ROUTE_MAIN,
   ROUTE_PRIVACY_POLICY,
   ROUTE_TERMS_OF_USE,
-} from "../routes/routes";
+} from "../../routes/routes";
 import { Link } from "react-router-dom";
 import {
   facebook,
@@ -10,7 +10,8 @@ import {
   linkedin,
   twitter,
   youtube,
-} from "../static/images";
+} from "../../static/images";
+import './Footer.css'
 
 export const Footer = () => {
   return (
@@ -31,54 +32,54 @@ export const Footer = () => {
           <div className={`footer-content-links`}>
             <div className={`footer-links-wrapper`}>
               <p className={`footer-links-name`}>Product</p>
-              <a className={`footer-link`} href="#">
+              <Link className={`footer-link`} to={`#`}>
                 Folderly
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Integrations
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Case Studies
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Pricing
-              </a>
+              </Link>
             </div>
             <div className={`footer-links-wrapper`}>
               <p className={`footer-links-name`}>Resources</p>
-              <a className={`footer-link`} href="#">
+              <Link className={`footer-link`} to={`#`}>
                 Blog
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Help Center
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 ESP Guides
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Email Deliverability
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Email Marketing
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Cold Email Outreach
-              </a>
+              </Link>
             </div>
             <div className={`footer-links-wrapper`}>
               <p className={`footer-links-name`}>Contact</p>
-              <a className={`footer-link`} href="#">
+              <Link className={`footer-link`} to={`#`}>
                 Request a Demo
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Email Deliverability Consulting
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Affiliate Program
-              </a>
-              <a className={`footer-link`} href="#">
+              </Link>
+              <Link className={`footer-link`} to={`#`}>
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

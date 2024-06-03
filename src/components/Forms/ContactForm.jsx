@@ -1,4 +1,4 @@
-import {FormInput} from "../basic/FormInput";
+import {FormInput} from "../basic/FormComponents/FormInput";
 import {Button} from "../basic/Button";
 import {Link} from "react-router-dom";
 import {ROUTE_PRIVACY_POLICY, ROUTE_TERMS_OF_USE} from "../../routes/routes";

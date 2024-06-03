@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {ROUTE_CONTACT} from "../../routes/routes";
 import {Button} from "../basic/Button";
+import './CTA.css'
 
 export const CTA = () => {
     return (

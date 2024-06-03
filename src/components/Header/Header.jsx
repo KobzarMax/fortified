@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom";
-import {ROUTE_CONTACT, ROUTE_MAIN} from "../routes/routes";
-import {headerLogo} from "../static/images";
-import {Button} from "./basic/Button";
+import {ROUTE_CONTACT, ROUTE_MAIN} from "../../routes/routes";
+import {headerLogo} from "../../static/images";
+import {Button} from "../basic/Button";
 import { useEffect, useRef, useState } from 'react';
+import './Header.css'
 
 export const Header = () => {
 

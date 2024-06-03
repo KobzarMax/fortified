@@ -1,0 +1,100 @@
+.footer {
+    background-color: #282828;
+    padding: 64px 120px 0;
+}
+.footer-copyright {
+    padding: 32px 0;
+    border-top: 1px solid #CBCFDA14;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-copyright p {
+    color: #AEAEAE;
+    font-size: 14px;
+    line-height: 19.6px;
+}
+.footer-copyright-links a {
+    display: inline-block;
+    color: #AEAEAE;
+    font-size: 14px;
+    line-height: 19.6px;
+    transition: 0.3s all ease-out;
+}
+.footer-copyright-links a:hover {
+    color: #ffffff;
+}
+.footer-copyright-links a:not(:last-child) {
+    margin-right: 41px;
+}
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+.footer-content-images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.footer-content-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 110px;
+}
+.footer-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer-links-name {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 16px;
+}
+.footer-link {
+    color: #AEAEAE;
+    font-size: 14px;
+    line-height: 19.6px;
+    transition: 0.3s all ease-out;
+}
+.footer-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 46px 16px 0;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 52px;
+    }
+    .footer-content-links {
+        flex-wrap: wrap;
+        gap: 64px;
+    }
+    .footer-copyright {
+        padding: 32px 0 46px;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+    .footer-copyright-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

@@ -1,14 +1,10 @@
-import {PageHeading} from "../components/PageHeading";
+import {PageHeading} from "../components/PageHeading/PageHeading";
 import {Fragment} from "react";
 
 export const TermsOfUse = () => {
     return (
         <Fragment>
-            <PageHeading>
-                <h1 className={`page-heading-title`}>
-                    Terms of Use
-                </h1>
-            </PageHeading>
+            <PageHeading title={'Terms of Use'} />
             <div className={`legal-text-wrapper`}>
                 <div className={`legal-text-section`}>
                     <h5 className={`gradient-title`}>
@@ -111,13 +107,11 @@ export const TermsOfUse = () => {
                                 terms and conditions of our representation.
                             </p>
                             <p className={`legal-text subtitle lg`}>
-                                Fortified Web will submit the content removal request on the users behalf. This
-                                submission will include the following Letter of Authorization (LoA), which outlines the
-                                terms and conditions of our representation.
+                                Details and Disclaimers of the LoA:
                             </p>
                         </div>
                         <div className={`legal-text-inner listed`}>
-                            <h6 className={`gradient-title`}>
+                            <h6 className={`gradient-title listed-title`}>
                                 9.1.1 Purpose of Representation:
                             </h6>
                             <p className={`legal-text subtitle lg`}>
@@ -126,7 +120,7 @@ export const TermsOfUse = () => {
                             </p>
                         </div>
                         <div className={`legal-text-inner listed`}>
-                            <h6 className={`gradient-title`}>
+                            <h6 className={`gradient-title listed-title`}>
                                 9.1.2 Submission Process:
                             </h6>
                             <p className={`legal-text subtitle lg`}>
@@ -135,7 +129,7 @@ export const TermsOfUse = () => {
                             </p>
                         </div>
                         <div className={`legal-text-inner listed`}>
-                            <h6 className={`gradient-title`}>
+                            <h6 className={`gradient-title listed-title`}>
                                 9.1.3 Scope of Representation:
                             </h6>
                             <p className={`legal-text subtitle lg`}>
@@ -144,7 +138,7 @@ export const TermsOfUse = () => {
                             </p>
                         </div>
                         <div className={`legal-text-inner listed`}>
-                            <h6 className={`gradient-title`}>
+                            <h6 className={`gradient-title listed-title`}>
                                 9.1.4 Confidentiality:
                             </h6>
                             <p className={`legal-text subtitle lg`}>
@@ -153,7 +147,7 @@ export const TermsOfUse = () => {
                             </p>
                         </div>
                         <div className={`legal-text-inner listed`}>
-                            <h6 className={`gradient-title`}>
+                            <h6 className={`gradient-title listed-title`}>
                                 9.1.5 Cooperation:
                             </h6>
                             <p className={`legal-text subtitle lg`}>
@@ -162,7 +156,7 @@ export const TermsOfUse = () => {
                             </p>
                         </div>
                         <div className={`legal-text-inner listed`}>
-                            <h6 className={`gradient-title`}>
+                            <h6 className={`gradient-title listed-title`}>
                                 9.1.6 Termination of Authorization:
                             </h6>
                             <p className={`legal-text subtitle lg`}>
@@ -214,7 +208,7 @@ export const TermsOfUse = () => {
                         Fortified Web reserves the right to modify these terms at any time. Clients will be notified of any changes, and continued use of our services constitutes acceptance of the updated terms.
                     </p>
                 </div>
-                <div className={`legal-text-section`}>h
+                <div className={`legal-text-section`}>
                     <h5 className={`gradient-title`}>
                         14. Contact Information
                     </h5>
