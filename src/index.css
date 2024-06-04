@@ -261,39 +261,6 @@ h6 {
   -webkit-text-fill-color: transparent;
 }
 
-.form-wrapper {
-  position: relative;
-  padding: 120px;
-}
-.form-wrapper:after,
-.form-wrapper:before {
-  content: url("./asset/corner-bg.svg");
-  position: absolute;
-  z-index: -1;
-}
-.form-wrapper:after {
-  top: 0;
-  right: 0;
-}
-.form-wrapper:before {
-  -webkit-transform: scaleX(-1);
-  transform: scale(-1);
-  bottom: 0;
-  left: 0;
-}
-.form-inner {
-  max-width: 812px;
-  margin: 0 auto;
-}
-.form-wrapper-title {
-  text-align: center;
-  margin-bottom: 16px;
-}
-.form-wrapper-subtitle {
-  text-align: center;
-  color: #605a57;
-  margin-bottom: 46px;
-}
 .form {
   border: 1px solid #f4f4f4;
   background-color: #ffffff;
@@ -426,6 +393,20 @@ h6 {
   text-align: center;
   color: #605a57;
 }
+#contact-form-step-one .btn {
+  margin-left: auto;
+  margin-right: 0;
+  width: fit-content;
+}
+.form-buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.form-buttons-wrapper .btn:first-child {
+  gap: 10px;
+}
 
 @media (max-width: 992px) {
   h1 {
@@ -466,9 +447,6 @@ h6 {
   .hero-subtitle {
     padding: 0;
   }
-  .form-wrapper {
-    padding: 72px 16px 120px;
-  }
   .form-cols {
     grid-template-columns: 1fr;
   }
@@ -492,5 +470,10 @@ h6 {
   }
   .error-code {
     font-size: 60vw;
+  }
+  #contact-form-step-one .btn {
+    margin-left: auto;
+    margin-right: 0;
+    width: 100%;
   }
 }

@@ -18,6 +18,23 @@
   padding: 12px 120px;
 }
 
+.close-contact {
+  border: 1px solid #F4F4F4;
+  background-color: #ffffff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 13px 12px 13px 12px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.close-contact:hover {
+  border-color: #8224b8;
+}
+
 @media (max-width: 992px) {
   .header-inner {
     padding: 16px 20px;

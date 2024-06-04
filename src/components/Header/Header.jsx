@@ -1,4 +1,4 @@
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import { ROUTE_CONTACT, ROUTE_MAIN } from "../../routes/routes";
 import { headerLogo, xClose } from "../../static/images";
 import { Button } from "../basic/Button";
@@ -8,6 +8,7 @@ import "./Header.css";
 export const Header = () => {
   const [headerView, setHeaderView] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const ref = useRef(null);
   useEffect(() => {
     function handleScroll() {
@@ -35,12 +36,17 @@ export const Header = () => {
         <Link to={ROUTE_MAIN}>
           <img loading={"lazy"} src={headerLogo} alt="header logo" />
         </Link>
-        {}
-        <Link to={ROUTE_CONTACT}>
-          <Button type={"button"} btnStyle={`primary`} size={`md`}>
-            Contact Us
-          </Button>
-        </Link>
+        {location.pathname === ROUTE_CONTACT ? (
+            <div onClick={() => navigate(-1)} className={`close-contact`}>
+              <img src={xClose} alt="x close"/>
+            </div>
+        ) : (
+            <Link to={ROUTE_CONTACT}>
+              <Button type={"button"} btnStyle={`primary`} size={`md`}>
+                Contact Us
+              </Button>
+            </Link>
+        )}
       </div>
     </header>
   );
