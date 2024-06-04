@@ -1,0 +1,75 @@
+.tabs-wrapper {
+  padding: 24px 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+.tabs-progress-wrapper {
+  position: absolute;
+  top: 13px;
+  transform: translateX(-50%);
+  width: 65%;
+  height: 1.5px;
+  border: 1.5px dashed #F4F4F4;
+  left: 50%;
+  z-index: 0;
+}
+.tabs-progress-filling {
+  height: 1.5px;
+  transition: 0.3s all ease-in-out;
+  background-color: #8F00FF;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 0 96px;
+  position: relative;
+  z-index: 1;
+}
+.tab-item-number {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F4F4;
+  color: #AEAEAE;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  border-radius: 100%;
+  border: 1px solid transparent;
+  transition: 0.3s all;
+}
+.active .tab-item-number {
+  border-color: #8F00FF;
+  color: #8F00FF;
+  background-color: #ffffff;
+}
+.filled .tab-item-number {
+  border-color: #8F00FF;
+  color: #8F00FF;
+  background-color: #8F00FF;
+}
+
+.tab-item-name {
+  transition: 0.3s all;
+  color: #AEAEAE;
+}
+.active .tab-item-name {
+  color: #8F00FF;
+}
+.filled .tab-item-name {
+  color: #282828;
+}

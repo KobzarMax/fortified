@@ -1,5 +1,3 @@
 export const ContactFormStepTwo = () => {
-    return (
-        <div>two</div>
-    )
-}
+  return <div>two</div>;
+};

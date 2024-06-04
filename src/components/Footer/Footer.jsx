@@ -11,7 +11,7 @@ import {
   twitter,
   youtube,
 } from "../../static/images";
-import './Footer.css'
+import "./Footer.css";
 
 export const Footer = () => {
   return (

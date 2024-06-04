@@ -1,25 +1,26 @@
 .cta {
-    padding: 64px 120px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+  padding: 64px 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 .cta-title {
-    color: #ffffff;
-    margin-bottom: 16px;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
 .cta-subtitle {
-    color: #E6E6E6;
+  color: #e6e6e6;
 }
 
 @media (max-width: 992px) {
-    .cta {
-        padding: 46px 16px;
-        flex-direction: column;
-        gap: 32px;
-        align-items: flex-start;
-    }
-    .cta a, .cta .btn {
-        width: 100%;
-    }
+  .cta {
+    padding: 46px 16px;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  .cta a,
+  .cta .btn {
+    width: 100%;
+  }
 }
