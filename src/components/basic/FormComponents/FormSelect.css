@@ -1,0 +1,59 @@
+.form-select-wrapper {
+    cursor: pointer;
+}
+.form-select-wrapper.open, .form-select-wrapper.valid {
+    border: 1px solid #8f00ff;
+}
+.form-select-wrapper.error {
+    border: 1px solid #ff6a55;
+}
+.form-select-arrow {
+    transition: 0.3s all;
+}
+.form-select-wrapper.open .form-select-arrow {
+    transform: rotate(180deg);
+}
+.form-select-wrapper.disabled {
+    border: 1px solid #F4F4F4;
+    background-color: #F9F9F9;
+    pointer-events: none;
+    cursor: not-allowed;
+    color: #D8D8D8;
+}
+.form-field:has(.form-select-wrapper.disabled) .form-label {
+    color: #D8D8D8;
+}
+.form-select-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #F4F4F4;
+    border-top: none;
+    background-color: #ffffff;
+    z-index: 10;
+    padding: 4px 0;
+    display: none;
+    box-shadow: 0 4px 4px 0 #0000000D;
+    border-radius: 8px;
+}
+.open .form-select-dropdown {
+    display: block;
+}
+.form-select-option {
+    padding: 12.5px 16px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.form-select-option:not(:first-child) {
+    margin-top: 2px;
+}
+.form-select-option:hover,
+.form-select-option.selected {
+    background-color: #F4F4F4;
+}

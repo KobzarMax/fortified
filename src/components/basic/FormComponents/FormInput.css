@@ -5,12 +5,14 @@
   flex-direction: column;
   gap: 4px;
   width: 100%;
+  position: relative;
 }
 .form-label {
   color: #606360;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.02em;
+  transition: 0.3s all;
 }
 .form-label.required {
   position: relative;
@@ -22,7 +24,7 @@
   top: -7px;
   right: -7px;
 }
-.form-input {
+.form-input, .form-select-wrapper {
   background-color: #f9f9f9;
   border: 1px solid #f4f4f4;
   padding: 16px;
@@ -45,6 +47,17 @@
 .form-input.error:invalid {
   border: 1px solid #ff6a55;
 }
+.form-input:disabled {
+  border: 1px solid #F4F4F4;
+  background-color: #F9F9F9;
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #D8D8D8;
+}
+.form-field:has(.form-input:disabled) .form-label {
+  color: #D8D8D8;
+}
+
 .error-message {
   font-size: 14px;
   line-height: 21px;

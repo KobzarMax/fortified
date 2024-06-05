@@ -4,6 +4,7 @@ import {FormWrapper} from "./FormWrapper";
 import {Button} from "../basic/Button";
 import {arrowRight} from "../../static/images";
 import {FormInput} from "../basic/FormComponents/FormInput";
+import {FormSelect} from "../basic/FormComponents/FormSelect";
 
 export const ContactFormStepTwo = ({ changeTab }) => {
   return (
@@ -19,6 +20,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
               type={`text`}
               label={`Link to the content you wish to remove`}
           />
+            <FormSelect inputValue={''} options={['option1', 'option2', 'option3', 'option4', 'option5', 'option6']} label={'Link to original/official online presence (e.g., Website, Social Account)'} placeholder={'Enter link to original/official online presence'} />
           <div className={`form-buttons-wrapper`}>
             <Button onClick={() => changeTab(1)} type={"button"} size={"md"} btnStyle={"secondary"}>
               <img style={{ transform: `rotate(180deg)` }} src={arrowRight} alt="arrow right"/> Back

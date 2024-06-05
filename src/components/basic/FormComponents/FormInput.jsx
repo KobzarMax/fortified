@@ -15,12 +15,14 @@ export const FormInput = ({
 }) => {
   return (
     <div className={`form-field`}>
-      <label
-        className={`form-label ${required ? "required" : ""}`}
-        htmlFor={name}
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          className={`form-label ${required ? "required" : ""}`}
+          htmlFor={name}
+        >
+          {label}
+        </label>
+      )}
       <input
         className={`form-input ${isValid ? "valid" : ""} ${
           isError ? "error" : ""
