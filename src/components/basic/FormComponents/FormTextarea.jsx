@@ -1,6 +1,6 @@
 import "./FormInput.css";
 
-export const FormInput = ({
+export const FormTextarea = ({
   required,
   disabled,
   name,
@@ -23,7 +23,7 @@ export const FormInput = ({
           {label}
         </label>
       )}
-      <input
+      <textarea
         className={`form-input ${isValid ? "valid" : ""} ${
           isError ? "error" : ""
         }`}
@@ -34,8 +34,7 @@ export const FormInput = ({
         id={name}
         required={required}
         disabled={disabled}
-        type={type}
-      />
+      ></textarea>
       {isError && <p className={`error-message`}>{error}</p>}
     </div>
   );

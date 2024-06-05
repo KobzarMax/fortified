@@ -278,8 +278,9 @@ h6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  width: 100%;
 }
-.form .btn {
+.form .btn.primary, .form .btn.secondary {
   margin-top: 16px;
   width: fit-content;
 }
@@ -409,6 +410,18 @@ h6 {
 }
 .form-buttons-wrapper .btn:first-child {
   gap: 10px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @media (max-width: 992px) {

@@ -17,6 +17,9 @@ import twitter from "../asset/twitter.svg";
 import listStar from "../asset/twitter.svg";
 import check from "../asset/check.svg";
 import xClose from "../asset/x-icon.svg";
+import download from "../asset/download.svg";
+import file from "../asset/file.svg";
+import trash from "../asset/trash.svg";
 
 export {
   headerLogo,
@@ -37,5 +40,8 @@ export {
   facebook,
   listStar,
   check,
-  xClose
+  download,
+  xClose,
+  file,
+  trash,
 };
