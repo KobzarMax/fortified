@@ -3,6 +3,7 @@ import { Tabs } from "../components/Tabs/Tabs";
 import { ContactFormStepOne } from "../components/Forms/ContactFormStepOne";
 import { ContactFormStepTwo } from "../components/Forms/ContactFormStemTwo";
 import { ContactFormStepTreeV1 } from "../components/Forms/ContactFormStepThreeV1";
+// import { ContactFormStepTreeV2 } from "../components/Forms/ContactFormStepThreeV2";
 
 export const Contact = () => {
   const [currentTab, setCurrentTab] = useState(1);
@@ -18,7 +19,7 @@ export const Contact = () => {
       case 2:
         return <ContactFormStepTwo changeTab={handleCurrentTab} />;
       case 3:
-        return <ContactFormStepTreeV1 changeTab={handleCurrentTab} />;
+        return <ContactFormStepTreeV1 />;
       default:
         return <ContactFormStepOne />;
     }

@@ -10,6 +10,12 @@ import { FormFileInput } from "../basic/FormComponents/FormFileInput";
 import { FormTextarea } from "../basic/FormComponents/FormTextarea";
 
 export const ContactFormStepTwo = ({ changeTab }) => {
+  // const navigate = useNavigate();
+  //
+  // const handleFormFinish = () => {
+  //   navigate(ROUTE_MAIN);
+  //   localStorage.setItem("success", "1");
+  // };
   return (
     <FormWrapper size={"md"} title={`Content Removal Request Form`}>
       <p className={`form-wrapper-subtitle subtitle lg`}>

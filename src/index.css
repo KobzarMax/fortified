@@ -424,6 +424,10 @@ h6 {
   border-width: 0;
 }
 
+._lock {
+  overflow: hidden;
+}
+
 @media (max-width: 992px) {
   h1 {
     font-size: 40px;

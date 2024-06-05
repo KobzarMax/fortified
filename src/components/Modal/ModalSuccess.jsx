@@ -1,14 +1,16 @@
-import { FormWrapper } from "./FormWrapper";
-import { successFormV1 } from "../../static/images";
+import { ModalOverlay } from "./ModalOverlay";
+import { successFormV1, xClose } from "../../static/images";
 import { Link } from "react-router-dom";
 import { ROUTE_MAIN } from "../../routes/routes";
 import { Button } from "../basic/Button";
 
-export const ContactFormStepTreeV1 = () => {
+export const ModalSuccess = ({ onClose }) => {
   return (
-    <FormWrapper size={"md"}>
-      <div className={`form success`}>
+    <ModalOverlay size={`497`} onClose={onClose}>
+      <div className={`modal-success-header`}>
         <img src={successFormV1} alt="success form" />
+      </div>
+      <div className={`modal-success-content`}>
         <p className={`success-title gradient-title`}>
           Thank you for choosing Fortified Web's services!
         </p>
@@ -32,6 +34,12 @@ export const ContactFormStepTreeV1 = () => {
           </Button>
         </Link>
       </div>
-    </FormWrapper>
+      <img
+        className={`modal-close`}
+        onClick={() => onClose()}
+        src={xClose}
+        alt="x-close"
+      />
+    </ModalOverlay>
   );
 };

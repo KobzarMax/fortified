@@ -20,6 +20,8 @@ import xClose from "../asset/x-icon.svg";
 import download from "../asset/download.svg";
 import file from "../asset/file.svg";
 import trash from "../asset/trash.svg";
+import successFormV1 from "../asset/success_form_v1.svg";
+import successFormV2 from "../asset/success_form_v2.svg";
 
 export {
   headerLogo,
@@ -44,4 +46,6 @@ export {
   xClose,
   file,
   trash,
+  successFormV1,
+  successFormV2,
 };

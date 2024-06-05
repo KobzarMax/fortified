@@ -15,11 +15,20 @@ const tabs = [
 
 export const Tabs = ({ currentTab }) => {
   return (
-    <div className={`tabs-wrapper`}>
+    <div
+      style={{
+        height: currentTab === tabs.length && "0",
+        padding: currentTab === tabs.length && "0",
+      }}
+      className={`tabs-wrapper`}
+    >
       <div className="tabs-inner">
         <div className={`tabs-progress-wrapper`}>
           <div className={`tabs-progress-static`}></div>
-          <div style={{width: `${Number(currentTab) * 33.33}%`}} className={`tabs-progress-filling`}></div>
+          <div
+            style={{ width: `${Number(currentTab) * 33.33}%` }}
+            className={`tabs-progress-filling`}
+          ></div>
         </div>
         {tabs.map((tab, index) => {
           const tabNumber = index + 1;
@@ -28,8 +37,8 @@ export const Tabs = ({ currentTab }) => {
           return (
             <div
               key={tab.name}
-              className={`tab-item ${activeTab ? "active" : ''} ${
-                filledTab ? "filled" : ''
+              className={`tab-item ${activeTab ? "active" : ""} ${
+                filledTab ? "filled" : ""
               }`}
             >
               <span className={`tab-item-number`}>
