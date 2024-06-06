@@ -524,6 +524,20 @@ h6 {
   animation: fadeStatic 6s forwards;
 }
 
+.components-wrapper {
+  padding: 72px 120px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  flex-direction: column;
+}
+.components-small {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 24px;
+}
 @keyframes shine {
   0%,
   10% {
@@ -568,5 +582,11 @@ h6 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .components-wrapper {
+    padding: 40px 16px;
   }
 }

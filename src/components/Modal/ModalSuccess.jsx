@@ -1,5 +1,5 @@
 import { ModalOverlay } from "./ModalOverlay";
-import { successFormV1, xClose } from "../../static/images";
+import { successFormV1 } from "../../static/images";
 import { Link } from "react-router-dom";
 import { ROUTE_MAIN } from "../../routes/routes";
 import { Button } from "../basic/Button";
@@ -34,12 +34,6 @@ export const ModalSuccess = ({ onClose }) => {
           </Button>
         </Link>
       </div>
-      <img
-        className={`modal-close`}
-        onClick={() => onClose()}
-        src={xClose}
-        alt="x-close"
-      />
     </ModalOverlay>
   );
 };

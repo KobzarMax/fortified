@@ -1,6 +1,7 @@
 import { useClickOutside } from "../../utils/utils";
 import { useRef } from "react";
 import "./Modal.css";
+import { xClose } from "../../static/images";
 
 export const ModalOverlay = ({ children, onClose, size }) => {
   const modalRef = useRef(null);
@@ -14,6 +15,12 @@ export const ModalOverlay = ({ children, onClose, size }) => {
         className={`modal-wrapper`}
       >
         {children}
+        <img
+          className={`modal-close`}
+          onClick={() => onClose()}
+          src={xClose}
+          alt="x-close"
+        />
       </div>
     </div>
   );

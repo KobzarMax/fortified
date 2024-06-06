@@ -25,6 +25,6 @@ input[type='checkbox'] {
     height: 21px;
     border-radius: 5px;
 }
-input[type='checkbox']:invalid {
+input[type='checkbox'].error {
     accent-color: #ff6a55;
 }

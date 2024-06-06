@@ -24,7 +24,7 @@ export const FormCustombox = ({
             className={`form-input ${isValid ? "valid" : ""} ${
               isError ? "error" : ""
             }`}
-            value={inputValue}
+            checked={inputValue}
             // onChange={(event) => onChange(event.target.value)}
             name={name}
             id={id}

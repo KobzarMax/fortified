@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import {
+  ROUTE_COMPONENTS,
   ROUTE_CONTACT,
   ROUTE_CONTACT_FINISH_V2,
   ROUTE_CONTACT_FINISH_V3,
@@ -15,6 +16,7 @@ import { Loader } from "../components/Loader";
 import { Contact } from "../pages/Contact";
 import { TermsOfUse } from "../pages/TermsOfUse";
 import { PrivacyPolicy } from "../pages/PrivacyPolicy";
+import { Components } from "../pages/Components";
 
 export const router = createBrowserRouter([
   {
@@ -70,6 +72,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <PrivacyPolicy />
+          </Suspense>
+        ),
+      },
+      {
+        path: ROUTE_COMPONENTS,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Components />
           </Suspense>
         ),
       },
