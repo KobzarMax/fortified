@@ -2,14 +2,23 @@ import { Fragment, useState } from "react";
 import { Tabs } from "../components/Tabs/Tabs";
 import { ContactFormStepOne } from "../components/Forms/ContactFormStepOne";
 import { ContactFormStepTwo } from "../components/Forms/ContactFormStemTwo";
-import { ContactFormStepTreeV1 } from "../components/Forms/ContactFormStepThreeV1";
-// import { ContactFormStepTreeV2 } from "../components/Forms/ContactFormStepThreeV2";
+import { ContactFormStepThreeV2 } from "../components/Forms/ContactFormStepThreeV2";
+import { ContactFormStepThreeV3 } from "../components/Forms/ContactFormStepThreeV3";
 
-export const Contact = () => {
-  const [currentTab, setCurrentTab] = useState(1);
+export const Contact = ({ baseTab, version }) => {
+  const [currentTab, setCurrentTab] = useState(baseTab ? baseTab : 1);
 
   const handleCurrentTab = (number) => {
     setCurrentTab(number);
+  };
+
+  const handleCorrectFinalStep = () => {
+    switch (version) {
+      case 2:
+        return <ContactFormStepThreeV2 />;
+      case 3:
+        return <ContactFormStepThreeV3 />;
+    }
   };
 
   const renderCurrentTabForm = () => {
@@ -19,7 +28,7 @@ export const Contact = () => {
       case 2:
         return <ContactFormStepTwo changeTab={handleCurrentTab} />;
       case 3:
-        return <ContactFormStepTreeV1 />;
+        return handleCorrectFinalStep();
       default:
         return <ContactFormStepOne />;
     }

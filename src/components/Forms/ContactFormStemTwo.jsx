@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { ROUTE_TERMS_OF_USE } from "../../routes/routes";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTE_MAIN, ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { FormWrapper } from "./FormWrapper";
 import { Button } from "../basic/Button";
 import { arrowRight } from "../../static/images";
@@ -10,12 +10,12 @@ import { FormFileInput } from "../basic/FormComponents/FormFileInput";
 import { FormTextarea } from "../basic/FormComponents/FormTextarea";
 
 export const ContactFormStepTwo = ({ changeTab }) => {
-  // const navigate = useNavigate();
-  //
-  // const handleFormFinish = () => {
-  //   navigate(ROUTE_MAIN);
-  //   localStorage.setItem("success", "1");
-  // };
+  const navigate = useNavigate();
+
+  const handleFormFinish = () => {
+    navigate(ROUTE_MAIN);
+    localStorage.setItem("success", "1");
+  };
   return (
     <FormWrapper size={"md"} title={`Content Removal Request Form`}>
       <p className={`form-wrapper-subtitle subtitle lg`}>
@@ -110,7 +110,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
             Back
           </Button>
           <Button
-            onClick={() => changeTab(3)}
+            onClick={() => handleFormFinish()}
             type={"button"}
             size={"lg"}
             btnStyle={"primary"}

@@ -237,7 +237,8 @@ h6 {
   max-width: 1001px;
   margin: 0 auto;
 }
-.hero-title {
+.hero-title,
+.hero-title span {
   text-align: center;
   color: #ffffff;
 }
@@ -280,7 +281,8 @@ h6 {
   gap: 24px;
   width: 100%;
 }
-.form .btn.primary, .form .btn.secondary {
+.form .btn.primary,
+.form .btn.secondary {
   margin-top: 16px;
   width: fit-content;
 }
@@ -495,5 +497,76 @@ h6 {
     margin-left: auto;
     margin-right: 0;
     width: 100%;
+  }
+}
+
+.hero-title {
+  animation: fadeFromBottom 1.4s forwards;
+  position: relative;
+}
+
+.shine span {
+  background: linear-gradient(90deg, #ffffff, #bbbbbb, #ffffff);
+  background-size: 200%;
+  color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  animation: shine 8s infinite;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.hero-inner .tag {
+  animation: fadeFromTop 1.4s forwards;
+  position: relative;
+}
+
+.hero-subtitle {
+  animation: fadeStatic 8s forwards;
+}
+
+@keyframes shine {
+  0%,
+  10% {
+    background-position: -1000px;
+  }
+  60% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+
+@keyframes fadeFromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeStatic {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
