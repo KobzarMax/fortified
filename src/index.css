@@ -511,7 +511,7 @@ h6 {
   color: transparent;
   background-clip: text;
   line-height: 1.2;
-  animation: shine 8s infinite;
+  animation: shine 10s infinite;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
@@ -520,8 +520,8 @@ h6 {
   position: relative;
 }
 
-.hero-subtitle {
-  animation: fadeStatic 8s forwards;
+.hero-subtitle, .hero .cta-link {
+  animation: fadeStatic 6s forwards;
 }
 
 @keyframes shine {
@@ -529,7 +529,7 @@ h6 {
   10% {
     background-position: -1000px;
   }
-  60% {
+  20% {
     background-position: top left;
   }
   90% {
