@@ -4,7 +4,6 @@ export const FormTextarea = ({
   required,
   disabled,
   name,
-  type,
   label,
   placeholder,
   inputValue,
@@ -28,7 +27,7 @@ export const FormTextarea = ({
           isError ? "error" : ""
         }`}
         value={inputValue}
-        // onChange={(event) => onChange(event.target.value)}
+        onChange={(event) => onChange(event)}
         placeholder={placeholder}
         name={name}
         id={name}

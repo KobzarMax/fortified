@@ -24,10 +24,11 @@
   top: -7px;
   right: -7px;
 }
-.form-input, .form-select-wrapper {
+.form-input,
+.form-select-wrapper {
   background-color: #f9f9f9;
   border: 1px solid #f4f4f4;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 16px;
   font-size: 16px;
   line-height: 16px;
@@ -46,18 +47,19 @@
 .form-input:focus {
   border: 1px solid #8f00ff;
 }
-.form-input.error:invalid {
+.form-input.error:invalid,
+.form-input.error {
   border: 1px solid #ff6a55;
 }
 .form-input:disabled {
-  border: 1px solid #F4F4F4;
-  background-color: #F9F9F9;
+  border: 1px solid #f4f4f4;
+  background-color: #f9f9f9;
   pointer-events: none;
   cursor: not-allowed;
-  color: #D8D8D8;
+  color: #d8d8d8;
 }
 .form-field:has(.form-input:disabled) .form-label {
-  color: #D8D8D8;
+  color: #d8d8d8;
 }
 
 .error-message {

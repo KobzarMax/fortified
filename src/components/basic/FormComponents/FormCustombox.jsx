@@ -9,7 +9,6 @@ export const FormCustombox = ({
   label,
   inputValue,
   onChange,
-  error,
   isValid,
   isError,
 }) => {
@@ -25,7 +24,7 @@ export const FormCustombox = ({
               isError ? "error" : ""
             }`}
             checked={inputValue}
-            // onChange={(event) => onChange(event.target.value)}
+            onChange={(event) => onChange(event)}
             name={name}
             id={id}
             required={required}

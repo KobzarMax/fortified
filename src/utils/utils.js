@@ -65,7 +65,7 @@ export const slideDown = (target, duration = 300) => {
 };
 
 export const scrollToTop = () => {
-  const mainContent = document.querySelector(".main-content");
+  const mainContent = document.querySelector("html");
   if (mainContent) {
     mainContent.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }

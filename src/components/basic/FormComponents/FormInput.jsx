@@ -28,7 +28,7 @@ export const FormInput = ({
           isError ? "error" : ""
         }`}
         value={inputValue}
-        // onChange={(event) => onChange(event.target.value)}
+        onChange={(event) => onChange(event)}
         placeholder={placeholder}
         name={name}
         id={name}
