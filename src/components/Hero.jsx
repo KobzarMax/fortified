@@ -9,12 +9,12 @@ export const Hero = () => {
     <div className={`hero background-gradient`}>
       <div className={`hero-inner`}>
         <Tag type={"containered"} text={`Brand Protection and Management`} />
-        <h1 className={`hero-title shine`}>
-          <span>
+        <h1 className={`hero-title`}>
+          <span className={`shine`}>
             <b>Fortified Web</b>
           </span>
           <br />
-          <span>Reinforce Your Digital Presence</span>
+          <span className={`shine`}>Reinforce Your Digital Presence</span>
         </h1>
         <p className="hero-subtitle subtitle lg">
           Embrace the power of simplicity with an stress-free fake content

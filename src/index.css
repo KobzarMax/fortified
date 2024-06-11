@@ -505,14 +505,19 @@ h6 {
   position: relative;
 }
 
-.shine span {
-  background: linear-gradient(90deg, #ffffff, #bbbbbb, #ffffff);
+.shine {
   background-size: 200%;
-  color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
   background-clip: text;
+  color: #FFFFFF;
   line-height: 1.2;
-  animation: shine 10s infinite;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation-name: shine;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
 }
 
 .hero-inner .tag {
@@ -539,18 +544,14 @@ h6 {
   gap: 24px;
 }
 @keyframes shine {
-  0%,
+  0% {
+    -webkit-mask-position: 150%;
+  }
   10% {
-    background-position: -1000px;
-  }
-  20% {
-    background-position: top left;
-  }
-  90% {
-    background-position: top right;
+    -webkit-mask-position: -50%;
   }
   100% {
-    background-position: 1000px;
+    -webkit-mask-position: -50%;
   }
 }
 
