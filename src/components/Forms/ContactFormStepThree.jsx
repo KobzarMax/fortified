@@ -4,12 +4,24 @@ import { ROUTE_MAIN, ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { Button } from "../basic/Button";
 import { arrowRight } from "../../static/images";
 
-export const ContactFormStepThree = ({ changeTab }) => {
+export const ContactFormStepThree = ({ changeTab, version }) => {
   const navigate = useNavigate();
   const handleFormFinish = (e) => {
     e.preventDefault();
-    navigate(ROUTE_MAIN);
-    localStorage.setItem("success", "1");
+    switch (version) {
+      case 1:
+        navigate(ROUTE_MAIN);
+        localStorage.setItem("success", "1");
+        break;
+      case 2:
+        changeTab(4);
+        break;
+      case 3:
+        changeTab(5);
+        break;
+      default:
+        console.error("Invalid version");
+    }
   };
 
   return (

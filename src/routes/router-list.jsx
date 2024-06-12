@@ -17,6 +17,8 @@ import { Contact } from "../pages/Contact";
 import { TermsOfUse } from "../pages/TermsOfUse";
 import { PrivacyPolicy } from "../pages/PrivacyPolicy";
 import { Components } from "../pages/Components";
+import { ContactV2 } from "../pages/ContactV2";
+import { ContactV3 } from "../pages/ContactV3";
 
 export const router = createBrowserRouter([
   {
@@ -47,7 +49,7 @@ export const router = createBrowserRouter([
         path: ROUTE_CONTACT_FINISH_V2,
         element: (
           <Suspense fallback={<Loader />}>
-            <Contact baseTab={3} version={2} />
+            <ContactV2 />
           </Suspense>
         ),
       },
@@ -55,7 +57,7 @@ export const router = createBrowserRouter([
         path: ROUTE_CONTACT_FINISH_V3,
         element: (
           <Suspense fallback={<Loader />}>
-            <Contact baseTab={3} version={3} />
+            <ContactV3 />
           </Suspense>
         ),
       },

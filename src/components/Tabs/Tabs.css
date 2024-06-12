@@ -83,5 +83,15 @@
   .tab-item-name {
     font-size: 12px;
     line-height: 12px;
+    white-space: break-spaces;
+    text-align: center;
+  }
+  .tabs-progress-wrapper {
+    width: calc(100% - 130px);
+  }
+  .tab-item {
+    padding: 0 12px;
+    justify-content: flex-start;
+    gap: 6px;
   }
 }

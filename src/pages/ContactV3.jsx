@@ -15,8 +15,8 @@ import { Button } from "../components/basic/Button";
 import { arrowRight } from "../static/images";
 import { scrollToTop } from "../utils/utils";
 
-export const Contact = () => {
-  const version = 1;
+export const ContactV3 = () => {
+  const version = 3;
   const [currentTab, setCurrentTab] = useState(1);
 
   useEffect(() => {
