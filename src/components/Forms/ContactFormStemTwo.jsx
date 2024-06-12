@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
-import { ROUTE_MAIN, ROUTE_TERMS_OF_USE } from "../../routes/routes";
+import { Link } from "react-router-dom";
+import { ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { FormWrapper } from "./FormWrapper";
 import { Button } from "../basic/Button";
 import { arrowRight } from "../../static/images";
@@ -12,7 +12,6 @@ import { useState } from "react";
 import { scrollToTop } from "../../utils/utils";
 
 export const ContactFormStepTwo = ({ changeTab }) => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     link_to_remove: "",
     link_to_original: "",
@@ -47,17 +46,17 @@ export const ContactFormStepTwo = ({ changeTab }) => {
       setValidForm(false);
       return false;
     }
+    scrollToTop();
     setErrorForm(null);
     setValidForm(true);
     return true;
   };
 
-  const handleFormFinish = (e) => {
+  const handleForm = (e) => {
     e.preventDefault();
     if (validateForm()) {
       console.log("Form submitted:", formData);
-      navigate(ROUTE_MAIN);
-      localStorage.setItem("success", "1");
+      changeTab(3);
     }
   };
   return (
@@ -78,25 +77,15 @@ export const ContactFormStepTwo = ({ changeTab }) => {
           isError={errorForm}
           isValid={validForm}
         />
-        <FormSelect
+        <FormInput
+          name={`link_to_original`}
+          placeholder={`Enter link to original/official online presence`}
+          type={`text`}
+          label={`Link to original/official online presence (e.g., Website, Social Account)`}
+          onChange={handleChange}
           inputValue={formData.link_to_original}
-          options={[
-            "option1",
-            "option2",
-            "option3",
-            "option4",
-            "option5",
-            "option6",
-          ]}
-          onChange={(value) =>
-            setFormData({ ...formData, link_to_original: value })
-          }
           isError={errorForm}
           isValid={validForm}
-          label={
-            "Link to original/official online presence (e.g., Website, Social Account)"
-          }
-          placeholder={"Enter link to original/official online presence"}
         />
         <div className={`form-field`}>
           <p className={`form-label`}>
@@ -182,7 +171,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
             Back
           </Button>
           <Button
-            onClick={(e) => handleFormFinish(e)}
+            onClick={(e) => handleForm(e)}
             type={"button"}
             size={"lg"}
             btnStyle={"primary"}

@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 import { ROUTE_MAIN } from "../routes/routes";
 import { Header } from "../components/Header/Header";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { Footer } from "../components/Footer/Footer";
 import { Button } from "../components/basic/Button";
 import { arrowRight } from "../static/images";
+import { scrollToTop } from "../utils/utils";
 
 export default function ErrorPage() {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <Fragment>
       <Header />

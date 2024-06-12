@@ -1,7 +1,11 @@
 import { PageHeading } from "../components/PageHeading/PageHeading";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import { scrollToTop } from "../utils/utils";
 
 export const TermsOfUse = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <Fragment>
       <PageHeading title={"Terms of Use"} />

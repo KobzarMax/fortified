@@ -26,6 +26,7 @@ export const ModalSuccess = ({ onClose }) => {
         </p>
         <Link to={ROUTE_MAIN}>
           <Button
+            onClick={() => onClose()}
             size={"lg"}
             btnStyle={`primary`}
             style={{ margin: "16px auto 0" }}

@@ -1,7 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { PageHeading } from "../components/PageHeading/PageHeading";
+import { scrollToTop } from "../utils/utils";
 
 export const PrivacyPolicy = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <Fragment>
       <PageHeading
@@ -169,7 +173,7 @@ export const PrivacyPolicy = () => {
           <h5 className={`gradient-title`}>Governing Law</h5>
           <p className={`legal-text subtitle lg`}>
             This Privacy Policy and any disputes arising from it are governed by
-            the laws of [Your Country/Region], without regard to its conflict of
+            the laws of Your Country/Region, without regard to its conflict of
             law provisions. <br />
             Thank you for entrusting Fortified-Web with your personal
             information. If you have any concerns or questions regarding privacy

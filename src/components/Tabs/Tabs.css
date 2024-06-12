@@ -67,6 +67,7 @@
 .tab-item-name {
   transition: 0.3s all;
   color: #AEAEAE;
+  white-space: nowrap;
 }
 .active .tab-item-name {
   color: #8F00FF;

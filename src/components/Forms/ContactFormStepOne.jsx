@@ -40,6 +40,7 @@ export const ContactFormStepOne = ({ changeTab }) => {
       setValidForm(false);
       return false;
     }
+    scrollToTop();
     setErrorForm(null);
     setValidForm(true);
     return true;

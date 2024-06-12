@@ -47,7 +47,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <FormWrapper size={`lg`} title={"Let’s Talk"}>
+    <FormWrapper id={`contact`} size={`lg`} title={"Let’s Talk"}>
       <p className={`form-wrapper-subtitle subtitle lg`}>
         Need assistance or have a query? Drop us a line and we’ll be happy to
         assist!

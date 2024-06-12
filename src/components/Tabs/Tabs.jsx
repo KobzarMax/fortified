@@ -14,19 +14,26 @@ const tabs = [
 ];
 
 export const Tabs = ({ currentTab }) => {
+  const handleProgressLength = () => {
+    switch (currentTab) {
+      case 1:
+        return "0%";
+      case 2:
+        return "50%";
+      case 3:
+        return "100%";
+      default:
+        return "0%";
+    }
+  };
+
   return (
-    <div
-      style={{
-        height: currentTab === tabs.length && "0",
-        padding: currentTab === tabs.length && "0",
-      }}
-      className={`tabs-wrapper`}
-    >
+    <div className={`tabs-wrapper`}>
       <div className="tabs-inner">
         <div className={`tabs-progress-wrapper`}>
           <div className={`tabs-progress-static`}></div>
           <div
-            style={{ width: `${Number(currentTab) * 33.33}%` }}
+            style={{ width: handleProgressLength() }}
             className={`tabs-progress-filling`}
           ></div>
         </div>

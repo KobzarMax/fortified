@@ -1,4 +1,4 @@
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ROUTE_CONTACT, ROUTE_MAIN } from "../../routes/routes";
 import { headerLogo, xClose } from "../../static/images";
 import { Button } from "../basic/Button";
@@ -10,6 +10,16 @@ export const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const ref = useRef(null);
+
+  const scrollToContact = (event) => {
+    event.stopPropagation();
+    navigate(ROUTE_MAIN);
+    const element = document.getElementById("contact");
+    element?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     function handleScroll() {
       const scrolledContentHeight = window.scrollY > 250;
@@ -37,15 +47,18 @@ export const Header = () => {
           <img loading={"lazy"} src={headerLogo} alt="header logo" />
         </Link>
         {location.pathname === ROUTE_CONTACT ? (
-            <div onClick={() => navigate(-1)} className={`close-contact`}>
-              <img src={xClose} alt="x close"/>
-            </div>
+          <div onClick={() => navigate(-1)} className={`close-contact`}>
+            <img src={xClose} alt="x close" />
+          </div>
         ) : (
-            <Link to={ROUTE_CONTACT}>
-              <Button type={"button"} btnStyle={`primary`} size={`md`}>
-                Contact Us
-              </Button>
-            </Link>
+          <Button
+            onClick={scrollToContact}
+            type={"button"}
+            btnStyle={`primary`}
+            size={`md`}
+          >
+            Contact Us
+          </Button>
         )}
       </div>
     </header>

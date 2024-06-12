@@ -101,7 +101,7 @@ export const FormFileInput = () => {
                   ></div>
                 </div>
                 <p className={`file-upload-size`}>
-                  Uploading {uploadProgress}%
+                  Uploading {uploadProgress.toFixed(0)}%
                 </p>
               </div>
             )}
