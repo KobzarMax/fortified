@@ -24,16 +24,25 @@ export const ContactForm = () => {
     });
   };
 
+  const scrollToFormTop = () => {
+    const element = document.getElementById("contact");
+    element?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const validateForm = () => {
     if (
       formData.first_name.trim() === "" ||
       formData.last_name.trim() === "" ||
       formData.business_email.trim() === ""
     ) {
+      scrollToFormTop();
       setErrorForm(true);
       setValidForm(false);
       return false;
     }
+    scrollToFormTop();
     setErrorForm(null);
     setValidForm(true);
     return true;
@@ -52,11 +61,7 @@ export const ContactForm = () => {
         Need assistance or have a query? Drop us a line and we’ll be happy to
         assist!
       </p>
-      <form
-        className={`form`}
-        id={`contact-form`}
-        action={(e) => handleSubmit(e)}
-      >
+      <form className={`form`} id={`contact-form`} action={undefined}>
         <div className={`form-cols`}>
           <FormInput
             required
@@ -120,7 +125,12 @@ export const ContactForm = () => {
           <Link to={ROUTE_PRIVACY_POLICY}>privacy policy</Link> and{" "}
           <Link to={ROUTE_TERMS_OF_USE}>terms of use</Link>.
         </p>
-        <Button type={"submit"} size={"lg"} btnStyle={"primary"}>
+        <Button
+          type={"button"}
+          onClick={(e) => handleSubmit(e)}
+          size={"lg"}
+          btnStyle={"primary"}
+        >
           Submit
         </Button>
       </form>
