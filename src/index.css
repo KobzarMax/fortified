@@ -510,16 +510,53 @@ h6 {
 .shine {
   background-size: 200%;
   text-decoration: none;
-  text-transform: uppercase;
   background-clip: text;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 1.2;
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
   -webkit-mask-size: 200%;
   animation-name: shine;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 10s;
+  transition: 0.3s all;
+}
+
+@keyframes shine {
+  0% {
+    -webkit-mask-position: 150%;
+    -webkit-mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
+  }
+  9% {
+    -webkit-mask-position: -50%;
+    -webkit-mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
+  }
+  10% {
+    -webkit-mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 1) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 1) 70%
+    );
+  }
+  100% {
+    -webkit-mask-position: -50%;
+    -webkit-mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 1) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 1) 70%
+    );
+  }
 }
 
 .hero-inner .tag {
@@ -527,7 +564,8 @@ h6 {
   position: relative;
 }
 
-.hero-subtitle, .hero .cta-link {
+.hero-subtitle,
+.hero .cta-link {
   animation: fadeStatic 6s forwards;
 }
 
@@ -544,17 +582,6 @@ h6 {
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
   gap: 24px;
-}
-@keyframes shine {
-  0% {
-    -webkit-mask-position: 150%;
-  }
-  10% {
-    -webkit-mask-position: -50%;
-  }
-  100% {
-    -webkit-mask-position: -50%;
-  }
 }
 
 @keyframes fadeFromBottom {
