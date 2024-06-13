@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ROUTE_PRIVACY_POLICY, ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { FormWrapper } from "./FormWrapper";
 import { useState } from "react";
+import { FormTextarea } from "../basic/FormComponents/FormTextarea";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ export const ContactForm = () => {
     last_name: "",
     business_email: "",
     phone: "",
-    job_title: "",
+    message: "",
   });
   const [validForm, setValidForm] = useState(null);
   const [errorForm, setErrorForm] = useState(null);
@@ -110,15 +111,14 @@ export const ContactForm = () => {
           inputValue={formData.phone}
           onChange={handleChange}
         />
-        <FormInput
+        <FormTextarea
+          name={`message`}
+          placeholder={`Enter your message here...`}
+          label={`Message`}
+          onChange={handleChange}
+          inputValue={formData.message}
           isError={errorForm}
           isValid={validForm}
-          name={`job_title`}
-          placeholder={`Enter your job title`}
-          type={`text`}
-          label={`Job title`}
-          inputValue={formData.job_title}
-          onChange={handleChange}
         />
         <p className={`form-message subtitle md`}>
           By submitting this form, you are agreeing to Fortified 's{" "}
