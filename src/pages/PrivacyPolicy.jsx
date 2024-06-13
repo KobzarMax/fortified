@@ -1,11 +1,7 @@
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import { PageHeading } from "../components/PageHeading/PageHeading";
-import { scrollToTop } from "../utils/utils";
 
 export const PrivacyPolicy = () => {
-  useEffect(() => {
-    scrollToTop();
-  }, []);
   return (
     <Fragment>
       <PageHeading

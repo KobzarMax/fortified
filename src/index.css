@@ -240,9 +240,7 @@ h6 {
 .hero-title,
 .hero-title span {
   text-align: center;
-  color: #ffffff;
 }
-.hero-title b,
 .hero-subtitle b {
   color: #ffffff;
 }
@@ -508,18 +506,16 @@ h6 {
 }
 
 .shine {
-  background-size: 200%;
   text-decoration: none;
-  background-clip: text;
-  color: #ffffff;
   line-height: 1.3;
-  -webkit-mask-image: linear-gradient(
-    -75deg,
-    rgba(255, 255, 255, 0.7) 0%,
-    #000,
-    rgba(255, 255, 255, 0.7) 70%
-  );
-  -webkit-mask-size: 200%;
+  color: #ffffff;
+  overflow: hidden;
+  background: linear-gradient(to right, #FFFFFF 0, #ffeece 16%, #FFFFFF 20%);
+  background-position-x: 100%;
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-size-adjust: none;
   animation-name: shine;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -528,14 +524,18 @@ h6 {
 
 @keyframes shine {
   0% {
-    -webkit-mask-position: 150%;
+    background-position-x: 100%;
   }
-  20% {
-    -webkit-mask-position: -50%;
+  10% {
+    background-position-x: -100%;
   }
   100% {
-    -webkit-mask-position: -50%;
+    background-position-x: -100%;
   }
+}
+
+.shine b {
+  color: inherit;
 }
 
 .hero-inner .tag {

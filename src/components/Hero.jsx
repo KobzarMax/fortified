@@ -3,15 +3,9 @@ import { Link } from "react-router-dom";
 import { ROUTE_CONTACT } from "../routes/routes";
 import { Button } from "./basic/Button";
 import { arrowRight } from "../static/images";
-import { useEffect } from "react";
+import { navigateHelper } from "../utils/utils";
 
 export const Hero = () => {
-  useEffect(() => {
-    document.querySelectorAll(".shine").forEach((element) => {
-      element.setAttribute("data-text", element.textContent);
-    });
-  }, []);
-
   return (
     <div className={`hero background-gradient`}>
       <div className={`hero-inner`}>
@@ -30,7 +24,11 @@ export const Hero = () => {
           efficient, and effective way!
         </p>
       </div>
-      <Link className={`cta-link`} to={ROUTE_CONTACT}>
+      <Link
+        onClick={() => navigateHelper()}
+        className={`cta-link`}
+        to={ROUTE_CONTACT}
+      >
         <Button size={"lg"} btnStyle={"secondary"}>
           Take Action Today{" "}
           <img loading={"lazy"} src={arrowRight} alt="arrow right" />

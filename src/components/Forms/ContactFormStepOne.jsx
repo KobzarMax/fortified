@@ -4,7 +4,7 @@ import { ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { FormInput } from "../basic/FormComponents/FormInput";
 import { Button } from "../basic/Button";
 import { useState } from "react";
-import { scrollToTop } from "../../utils/utils";
+import { navigateHelper, scrollToTop } from "../../utils/utils";
 
 export const ContactFormStepOne = ({ changeTab }) => {
   const [formData, setFormData] = useState({
@@ -58,7 +58,10 @@ export const ContactFormStepOne = ({ changeTab }) => {
       <p className={`form-wrapper-subtitle subtitle lg`}>
         Providing this information authorizes Fortified-Web to generate a Letter
         of Authorization, which will be sent to service providers. Details can
-        be found in our <Link to={ROUTE_TERMS_OF_USE}>Terms of Use</Link>
+        be found in our{" "}
+        <Link onClick={() => navigateHelper()} to={ROUTE_TERMS_OF_USE}>
+          Terms of Use
+        </Link>
       </p>
       <form className={`form`} id={`contact-form-step-one`} action={undefined}>
         <div className={`form-cols`}>
@@ -108,6 +111,7 @@ export const ContactFormStepOne = ({ changeTab }) => {
           onChange={handleChange}
           isError={errorForm}
           isValid={validForm}
+          error={`Position is required`}
         />
         <FormInput
           required
@@ -134,7 +138,6 @@ export const ContactFormStepOne = ({ changeTab }) => {
           error={`Phone Number is required`}
         />
         <FormInput
-          required
           name={`business_description`}
           placeholder={`Enter your business description`}
           type={`text`}

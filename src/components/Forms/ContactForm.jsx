@@ -5,6 +5,7 @@ import { ROUTE_PRIVACY_POLICY, ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { FormWrapper } from "./FormWrapper";
 import { useState } from "react";
 import { FormTextarea } from "../basic/FormComponents/FormTextarea";
+import { navigateHelper } from "../../utils/utils";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -110,6 +111,7 @@ export const ContactForm = () => {
           label={`Phone number`}
           inputValue={formData.phone}
           onChange={handleChange}
+          error={`Phone number is required`}
         />
         <FormTextarea
           name={`message`}
@@ -119,11 +121,18 @@ export const ContactForm = () => {
           inputValue={formData.message}
           isError={errorForm}
           isValid={validForm}
+          error={`Message is required`}
         />
         <p className={`form-message subtitle md`}>
           By submitting this form, you are agreeing to Fortified 's{" "}
-          <Link to={ROUTE_PRIVACY_POLICY}>privacy policy</Link> and{" "}
-          <Link to={ROUTE_TERMS_OF_USE}>terms of use</Link>.
+          <Link onClick={() => navigateHelper()} to={ROUTE_PRIVACY_POLICY}>
+            privacy policy
+          </Link>{" "}
+          and{" "}
+          <Link onClick={() => navigateHelper()} to={ROUTE_TERMS_OF_USE}>
+            terms of use
+          </Link>
+          .
         </p>
         <Button
           type={"button"}

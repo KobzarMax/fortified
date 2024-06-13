@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ROUTE_CONTACT } from "../../routes/routes";
 import { Button } from "../basic/Button";
 import "./CTA.css";
+import { navigateHelper } from "../../utils/utils";
 
 export const CTA = () => {
   return (
@@ -13,7 +14,7 @@ export const CTA = () => {
           we’ll handle the heavy lifting!
         </p>
       </div>
-      <Link to={ROUTE_CONTACT}>
+      <Link onClick={() => navigateHelper()} to={ROUTE_CONTACT}>
         <Button size={"lg"} btnStyle={"secondary"}>
           Let’s Get Started
         </Button>

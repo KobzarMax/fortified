@@ -6,7 +6,6 @@ import { FAQ } from "../components/FAQ/FAQ";
 import { CTA } from "../components/CTA/CTA";
 import { ContactForm } from "../components/Forms/ContactForm";
 import { ModalSuccess } from "../components/Modal/ModalSuccess";
-import { scrollToTop } from "../utils/utils";
 
 export const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,10 +15,6 @@ export const Home = () => {
     if (isSuccess === "1") {
       handleShowModal();
     }
-  }, []);
-
-  useEffect(() => {
-    scrollToTop();
   }, []);
 
   const handleShowModal = () => {

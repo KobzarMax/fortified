@@ -4,6 +4,7 @@ import { headerLogo, xClose } from "../../static/images";
 import { Button } from "../basic/Button";
 import { useEffect, useRef, useState } from "react";
 import "./Header.css";
+import { navigateHelper } from "../../utils/utils";
 
 export const Header = () => {
   const [headerView, setHeaderView] = useState(false);
@@ -14,10 +15,12 @@ export const Header = () => {
   const scrollToContact = (event) => {
     event.stopPropagation();
     navigate(ROUTE_MAIN);
-    const element = document.getElementById("contact");
-    element?.scrollIntoView({
-      behavior: "smooth",
-    });
+    setTimeout(() => {
+      const element = document.getElementById("contact");
+      element?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   useEffect(() => {
@@ -43,7 +46,7 @@ export const Header = () => {
       className={`header ${headerView ? "scrolled" : ""}`}
     >
       <div className="header-inner">
-        <Link to={ROUTE_MAIN}>
+        <Link onClick={() => navigateHelper()} to={ROUTE_MAIN}>
           <img loading={"lazy"} src={headerLogo} alt="header logo" />
         </Link>
         {location.pathname === ROUTE_CONTACT ? (

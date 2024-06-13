@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
 import { ROUTE_MAIN } from "../routes/routes";
 import { Header } from "../components/Header/Header";
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import { Footer } from "../components/Footer/Footer";
 import { Button } from "../components/basic/Button";
 import { arrowRight } from "../static/images";
-import { scrollToTop } from "../utils/utils";
+import { navigateHelper } from "../utils/utils";
 
 export default function ErrorPage() {
-  useEffect(() => {
-    scrollToTop();
-  }, []);
   return (
     <Fragment>
       <Header />
@@ -21,7 +18,11 @@ export default function ErrorPage() {
             We couldn’t find what you were looking for...
           </p>
         </div>
-        <Link className={`cta-link`} to={ROUTE_MAIN}>
+        <Link
+          onClick={() => navigateHelper()}
+          className={`cta-link`}
+          to={ROUTE_MAIN}
+        >
           <Button btnStyle={`primary`} size={`lg`}>
             Back To The Homepage{" "}
             <img

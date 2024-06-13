@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ROUTE_MAIN, ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { Button } from "../basic/Button";
 import { arrowRight } from "../../static/images";
-import { scrollToTop } from "../../utils/utils";
+import { navigateHelper, scrollToTop } from "../../utils/utils";
 
 export const ContactFormStepThree = ({ changeTab, version }) => {
   const navigate = useNavigate();
@@ -32,7 +32,10 @@ export const ContactFormStepThree = ({ changeTab, version }) => {
       <p className={`form-wrapper-subtitle subtitle lg`}>
         Providing this information authorizes Fortified-Web to generate a Letter
         of Authorization, which will be sent to service providers. Details can
-        be found in our <Link to={ROUTE_TERMS_OF_USE}>Terms of Use</Link>
+        be found in our{" "}
+        <Link onClick={() => navigateHelper()} to={ROUTE_TERMS_OF_USE}>
+          Terms of Use
+        </Link>
       </p>
       <form className={`form`} id={`contact-form-step-two`} action={undefined}>
         <p>

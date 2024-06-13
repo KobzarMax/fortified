@@ -15,16 +15,13 @@ export const FormFileInput = () => {
     event.preventDefault();
     const files = event.dataTransfer.files;
     if (files.length > 0) {
-      setFileData({
-        file_name: files[0].name,
-        file: files[0],
-      });
+      handleFileChange(files);
     }
     setIsDraggingOver(false);
   };
 
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files?.[0];
+  const handleFileChange = (files) => {
+    const selectedFile = files?.[0];
     if (selectedFile) {
       startUpload(selectedFile);
     }
@@ -115,14 +112,16 @@ export const FormFileInput = () => {
                 </p>
               </Fragment>
             ) : (
-              <p className={`subtitle md`}>
-                <span>Choose a file</span>{" "}
-                {isDraggingOver ? "drop here" : "or drag it here"}
-              </p>
+              !isUploading && (
+                <p className={`subtitle md`}>
+                  <span>Choose a file</span>{" "}
+                  {isDraggingOver ? "drop here" : "or drag it here"}
+                </p>
+              )
             )}
           </div>
         </div>
-        {fileData.file_name && (
+        {fileData.file_name && !isUploading && (
           <Button
             onClick={(e) => clearFileInput(e)}
             style={{ borderRadius: "100%" }}
@@ -137,7 +136,7 @@ export const FormFileInput = () => {
           id="file-upload"
           name="file-upload"
           type="file"
-          onChange={(event) => handleFileChange(event)}
+          onChange={(event) => handleFileChange(event.target.files)}
           className="sr-only"
         />
       </label>

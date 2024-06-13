@@ -86,3 +86,7 @@ export const useClickOutside = (ref, onClickOutside) => {
     };
   }, [ref, onClickOutside]);
 };
+
+export const navigateHelper = () => {
+  window.scroll(0, 0);
+};

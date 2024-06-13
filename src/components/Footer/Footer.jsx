@@ -12,6 +12,7 @@ import {
   youtube,
 } from "../../static/images";
 import "./Footer.css";
+import { navigateHelper } from "../../utils/utils";
 
 export const Footer = () => {
   return (
@@ -19,7 +20,7 @@ export const Footer = () => {
       <div className={`footer-inner`}>
         <div className={`footer-content`}>
           <div className={`footer-content-images`}>
-            <Link to={ROUTE_MAIN}>
+            <Link onClick={() => navigateHelper()} to={ROUTE_MAIN}>
               <img loading={`lazy`} src={footerLogo} alt="footer logo" />
             </Link>
             <div className={`footer-socials`}>
@@ -86,8 +87,12 @@ export const Footer = () => {
         <div className={`footer-copyright`}>
           <p>Fortifiedweb.io © 2023</p>
           <div className={`footer-copyright-links`}>
-            <Link to={ROUTE_PRIVACY_POLICY}>Privacy Policy</Link>
-            <Link to={ROUTE_TERMS_OF_USE}>Terms of Use</Link>
+            <Link onClick={() => navigateHelper()} to={ROUTE_PRIVACY_POLICY}>
+              Privacy Policy
+            </Link>
+            <Link onClick={() => navigateHelper()} to={ROUTE_TERMS_OF_USE}>
+              Terms of Use
+            </Link>
           </div>
         </div>
       </div>

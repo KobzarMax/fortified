@@ -3,6 +3,7 @@ import { successFormV1 } from "../../static/images";
 import { Link } from "react-router-dom";
 import { ROUTE_MAIN } from "../../routes/routes";
 import { Button } from "../basic/Button";
+import { navigateHelper } from "../../utils/utils";
 
 export const ModalSuccess = ({ onClose }) => {
   return (
@@ -24,7 +25,7 @@ export const ModalSuccess = ({ onClose }) => {
           <a href="mailto:info@fortified-web.com">info@fortified-web.com</a> for
           any urgent queries.
         </p>
-        <Link to={ROUTE_MAIN}>
+        <Link onClick={() => navigateHelper()} to={ROUTE_MAIN}>
           <Button
             onClick={() => onClose()}
             size={"lg"}

@@ -9,7 +9,7 @@ import { FormCustombox } from "../basic/FormComponents/FormCustombox";
 import { FormFileInput } from "../basic/FormComponents/FormFileInput";
 import { FormTextarea } from "../basic/FormComponents/FormTextarea";
 import { useState } from "react";
-import { scrollToTop } from "../../utils/utils";
+import { navigateHelper, scrollToTop } from "../../utils/utils";
 
 export const ContactFormStepTwo = ({ changeTab }) => {
   const [formData, setFormData] = useState({
@@ -64,7 +64,10 @@ export const ContactFormStepTwo = ({ changeTab }) => {
       <p className={`form-wrapper-subtitle subtitle lg`}>
         Providing this information authorizes Fortified-Web to generate a Letter
         of Authorization, which will be sent to service providers. Details can
-        be found in our <Link to={ROUTE_TERMS_OF_USE}>Terms of Use</Link>
+        be found in our{" "}
+        <Link onClick={() => navigateHelper()} to={ROUTE_TERMS_OF_USE}>
+          Terms of Use
+        </Link>
       </p>
       <form className={`form`} id={`contact-form-step-two`} action={undefined}>
         <FormInput
@@ -76,6 +79,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
           inputValue={formData.link_to_remove}
           isError={errorForm}
           isValid={validForm}
+          error={`Link to the content you wish to remove is required`}
         />
         <FormInput
           name={`link_to_original`}
@@ -86,6 +90,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
           inputValue={formData.link_to_original}
           isError={errorForm}
           isValid={validForm}
+          error={`Link to original/official online presence is required`}
         />
         <div className={`form-field`}>
           <p className={`form-label`}>
@@ -126,6 +131,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
               inputValue={formData.reg_number}
               isError={errorForm}
               isValid={validForm}
+              error={`Registration number is required`}
             />
             <FormSelect
               inputValue={formData.jurisdiction}
@@ -143,6 +149,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
                 "option6",
               ]}
               placeholder={"Select jurisdiction"}
+              error={`Link to original/official online presence is required`}
             />
           </div>
         </div>
@@ -155,6 +162,7 @@ export const ContactFormStepTwo = ({ changeTab }) => {
           inputValue={formData.issue}
           isError={errorForm}
           isValid={validForm}
+          error={`Explanation is required`}
         />
         <div className={`form-buttons-wrapper`}>
           <Button
