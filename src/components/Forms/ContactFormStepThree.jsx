@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ROUTE_MAIN, ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { Button } from "../basic/Button";
 import { arrowRight } from "../../static/images";
+import { scrollToTop } from "../../utils/utils";
 
 export const ContactFormStepThree = ({ changeTab, version }) => {
   const navigate = useNavigate();
@@ -14,9 +15,11 @@ export const ContactFormStepThree = ({ changeTab, version }) => {
         localStorage.setItem("success", "1");
         break;
       case 2:
+        scrollToTop();
         changeTab(4);
         break;
       case 3:
+        scrollToTop();
         changeTab(5);
         break;
       default:
@@ -32,6 +35,41 @@ export const ContactFormStepThree = ({ changeTab, version }) => {
         be found in our <Link to={ROUTE_TERMS_OF_USE}>Terms of Use</Link>
       </p>
       <form className={`form`} id={`contact-form-step-two`} action={undefined}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi
+          molestias porro quas. A nulla debitis maxime id assumenda, esse omnis!
+          Aspernatur libero recusandae officiis autem ducimus sint quia dolore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi
+          molestias porro quas. A nulla debitis maxime id assumenda, esse omnis!
+          Aspernatur libero recusandae officiis autem ducimus sint quia dolore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi
+          molestias porro quas. A nulla debitis maxime id assumenda, esse omnis!
+          Aspernatur libero recusandae officiis autem ducimus sint quia dolore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi
+          molestias porro quas. A nulla debitis maxime id assumenda, esse omnis!
+          Aspernatur libero recusandae officiis autem ducimus sint quia dolore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi
+          molestias porro quas. A nulla debitis maxime id assumenda, esse omnis!
+          Aspernatur libero recusandae officiis autem ducimus sint quia dolore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi
+          molestias porro quas. A nulla debitis maxime id assumenda, esse omnis!
+          Aspernatur libero recusandae officiis autem ducimus sint quia dolore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi
+          molestias porro quas. A nulla debitis maxime id assumenda, esse omnis!
+          Aspernatur libero recusandae officiis autem ducimus sint quia dolore.
+        </p>
         <div className={`form-buttons-wrapper`}>
           <Button
             onClick={() => changeTab(2)}

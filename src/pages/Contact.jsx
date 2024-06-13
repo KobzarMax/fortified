@@ -25,6 +25,7 @@ export const Contact = () => {
 
   const handleCurrentTab = (number) => {
     setCurrentTab(number);
+    scrollToTop();
   };
 
   const renderCurrentTabForm = () => {

@@ -18,14 +18,14 @@
   transform: translateX(-50%);
   width: 65%;
   height: 1.5px;
-  border: 1.5px dashed #F4F4F4;
+  border: 1.5px dashed #f4f4f4;
   left: 50%;
   z-index: 0;
 }
 .tabs-progress-filling {
   height: 1.5px;
-  transition: 0.3s all ease-in-out;
-  background-color: #8F00FF;
+  transition: 1s all ease-in-out;
+  background-color: #8f00ff;
 }
 
 .tab-item {
@@ -44,8 +44,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F4F4F4;
-  color: #AEAEAE;
+  background-color: #f4f4f4;
+  color: #aeaeae;
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
@@ -54,23 +54,23 @@
   transition: 0.3s all;
 }
 .active .tab-item-number {
-  border-color: #8F00FF;
-  color: #8F00FF;
+  border-color: #8f00ff;
+  color: #8f00ff;
   background-color: #ffffff;
 }
 .filled .tab-item-number {
-  border-color: #8F00FF;
-  color: #8F00FF;
-  background-color: #8F00FF;
+  border-color: #8f00ff;
+  color: #8f00ff;
+  background-color: #8f00ff;
 }
 
 .tab-item-name {
   transition: 0.3s all;
-  color: #AEAEAE;
+  color: #aeaeae;
   white-space: nowrap;
 }
 .active .tab-item-name {
-  color: #8F00FF;
+  color: #8f00ff;
 }
 .filled .tab-item-name {
   color: #282828;

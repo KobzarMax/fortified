@@ -22,6 +22,10 @@ export const Tabs = ({ currentTab }) => {
         return "50%";
       case 3:
         return "100%";
+      case 4:
+        return "100%";
+      case 5:
+        return "100%";
       default:
         return "0%";
     }
