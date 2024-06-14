@@ -1,5 +1,6 @@
 .security {
   position: relative;
+  overflow: hidden;
 }
 .security .security-bg {
   position: absolute;

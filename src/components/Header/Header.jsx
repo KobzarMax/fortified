@@ -14,13 +14,22 @@ export const Header = () => {
 
   const scrollToContact = (event) => {
     event.stopPropagation();
-    navigate(ROUTE_MAIN);
-    setTimeout(() => {
-      const element = document.getElementById("contact");
-      element?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }, 100);
+    if (location.pathname !== ROUTE_MAIN) {
+      navigate(ROUTE_MAIN);
+      setTimeout(() => {
+        const element = document.getElementById("contact");
+        element?.scrollIntoView({
+          behavior: "instant",
+        });
+      }, 100);
+    } else {
+      setTimeout(() => {
+        const element = document.getElementById("contact");
+        element?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 100);
+    }
   };
 
   useEffect(() => {
