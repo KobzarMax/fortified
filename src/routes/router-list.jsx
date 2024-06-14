@@ -2,8 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import {
   ROUTE_COMPONENTS,
   ROUTE_CONTACT,
-  ROUTE_CONTACT_FINISH_V2,
-  ROUTE_CONTACT_FINISH_V3,
   ROUTE_MAIN,
   ROUTE_PRIVACY_POLICY,
   ROUTE_TERMS_OF_USE,
@@ -17,8 +15,6 @@ import { Contact } from "../pages/Contact";
 import { TermsOfUse } from "../pages/TermsOfUse";
 import { PrivacyPolicy } from "../pages/PrivacyPolicy";
 import { Components } from "../pages/Components";
-import { ContactV2 } from "../pages/ContactV2";
-import { ContactV3 } from "../pages/ContactV3";
 
 export const router = createBrowserRouter([
   {
@@ -42,22 +38,6 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <Contact />
-          </Suspense>
-        ),
-      },
-      {
-        path: ROUTE_CONTACT_FINISH_V2,
-        element: (
-          <Suspense fallback={<Loader />}>
-            <ContactV2 />
-          </Suspense>
-        ),
-      },
-      {
-        path: ROUTE_CONTACT_FINISH_V3,
-        element: (
-          <Suspense fallback={<Loader />}>
-            <ContactV3 />
           </Suspense>
         ),
       },

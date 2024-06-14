@@ -520,7 +520,7 @@ h6 {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 10s;
-  animation-delay: 2s;
+  animation-delay: 1.4s;
 }
 
 @keyframes shine {

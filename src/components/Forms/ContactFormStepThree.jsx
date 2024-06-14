@@ -1,30 +1,15 @@
 import { FormWrapper } from "./FormWrapper";
-import { Link, useNavigate } from "react-router-dom";
-import { ROUTE_MAIN, ROUTE_TERMS_OF_USE } from "../../routes/routes";
+import { Link } from "react-router-dom";
+import { ROUTE_TERMS_OF_USE } from "../../routes/routes";
 import { Button } from "../basic/Button";
 import { arrowRight } from "../../static/images";
 import { navigateHelper, scrollToTop } from "../../utils/utils";
 
-export const ContactFormStepThree = ({ changeTab, version }) => {
-  const navigate = useNavigate();
+export const ContactFormStepThree = ({ changeTab }) => {
   const handleFormFinish = (e) => {
     e.preventDefault();
-    switch (version) {
-      case 1:
-        navigate(ROUTE_MAIN);
-        localStorage.setItem("success", "1");
-        break;
-      case 2:
-        scrollToTop();
-        changeTab(4);
-        break;
-      case 3:
-        scrollToTop();
-        changeTab(5);
-        break;
-      default:
-        console.error("Invalid version");
-    }
+    scrollToTop();
+    changeTab(4);
   };
 
   return (
