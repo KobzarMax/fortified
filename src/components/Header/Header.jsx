@@ -21,14 +21,14 @@ export const Header = () => {
         element?.scrollIntoView({
           behavior: "instant",
         });
-      }, 100);
+      }, 300);
     } else {
       setTimeout(() => {
         const element = document.getElementById("contact");
         element?.scrollIntoView({
           behavior: "smooth",
         });
-      }, 100);
+      }, 300);
     }
   };
 
