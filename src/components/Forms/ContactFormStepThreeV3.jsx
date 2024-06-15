@@ -3,9 +3,14 @@ import { Link } from "react-router-dom";
 import { ROUTE_MAIN } from "../../routes/routes";
 import { Button } from "../basic/Button";
 import { FormWrapper } from "./FormWrapper";
-import { navigateHelper } from "../../utils/utils";
+import { navigateHelper, scrollToTop } from "../../utils/utils";
+import { useEffect } from "react";
 
 export const ContactFormStepThreeV3 = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <FormWrapper size={"md"}>
       <div className={`form success v2`}>
